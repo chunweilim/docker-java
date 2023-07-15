@@ -13,7 +13,7 @@ if [[ -n $DOCKER_VERSION ]]; then
     # sudo apt install ./containerd.io_1.2.2-3_amd64.deb 
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     sudo apt-get update
-    sudo apt-cache policy containerd.io
+    sudo apt-get install containerd.io
     sudo apt-cache madison docker-ce
     sudo apt-get install "docker-ce=$DOCKER_VERSION"
 fi
